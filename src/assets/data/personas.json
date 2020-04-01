@@ -1,0 +1,25 @@
+{
+  "personas": [{
+    "id": "1",
+    "nombre": "Jonathan",
+    "apellido": "Rodriguez",
+    "edad": 21,
+    "estado": true
+  },
+  {
+    "id": "2",
+    "nombre": "Gloria",
+    "apellido": "Lenis",
+    "edad": 20,
+    "estado": true
+  },
+  {
+    "id": "3",
+    "nombre": "Carlos",
+    "apellido": "Pacheco",
+    "edad": 25,
+    "estado": true
+  }
+]
+
+}
