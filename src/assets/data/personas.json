@@ -1,22 +1,22 @@
 {
   "personas": [{
     "id": "1",
-    "nombre": "Jonathan",
-    "apellido": "Rodriguez",
-    "edad": 21,
-    "estado": true
-  },
-  {
-    "id": "2",
-    "nombre": "Gloria",
-    "apellido": "Lenis",
+    "nombre": "Juan Pablo",
+    "apellido": "Galeano S",
     "edad": 20,
     "estado": true
   },
   {
+    "id": "2",
+    "nombre": "Francia Viviana",
+    "apellido": "Salguero",
+    "edad": 38,
+    "estado": true
+  },
+  {
     "id": "3",
-    "nombre": "Carlos",
-    "apellido": "Pacheco",
+    "nombre": "Carlos Arley",
+    "apellido": "Salas Pacheco",
     "edad": 25,
     "estado": true
   }
