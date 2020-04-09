@@ -1,5 +1,5 @@
 {
-  "personas": [{
+  "data": [{
     "id": "1",
     "nombre": "Juan Pablo",
     "apellido": "Galeano S",
@@ -11,13 +11,6 @@
     "nombre": "Francia Viviana",
     "apellido": "Salguero",
     "edad": 38,
-    "estado": true
-  },
-  {
-    "id": "3",
-    "nombre": "Carlos Arley",
-    "apellido": "Salas Pacheco",
-    "edad": 25,
     "estado": true
   }
 ]
