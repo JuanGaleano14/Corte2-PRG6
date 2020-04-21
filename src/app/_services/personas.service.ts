@@ -10,7 +10,7 @@ export class PersonasService {
   constructor(private http: HttpClient) { }
 
   obtenerPersonas(){
-    return this.http.get('https://api-mi-liga.now.sh/api/jugadores');
+    return this.http.get('https://localhost/angulardb/consultados.php');
 
   }
 

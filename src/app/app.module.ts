@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PersonasService } from './_services/personas.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { TablaComponent } from './components/tabla/tabla.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -107,7 +108,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     PortalModule,
     ScrollingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [PersonasService],
   bootstrap: [AppComponent]
