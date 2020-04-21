@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Personas} from '../../interfaces/personas.interface'
-import * as PERSONAS from './../../../assets/data/personas.json'
+import {Personas} from '../../interfaces/personas.interface';
+import { PersonasService } from './../../_services/personas.service';
 
 @Component({
   selector: 'app-tabla',
@@ -9,18 +9,27 @@ import * as PERSONAS from './../../../assets/data/personas.json'
 })
 export class TablaComponent implements OnInit {
 
-  personas: Personas[];
+  personas: Personas[] = [];
   columnsToDisplay = ['id', 'nombre', 'apellido', 'edad', 'estado' ];
 
-  constructor() {
+  constructor(private servicioPersonas: PersonasService) {
 
   }
 
   ngOnInit() {
+    this.llamarServicio();
+  }
 
-    this.personas = (PERSONAS as any).data;
-    console.log(this.personas);
+  llamarServicio() {
+   /* this.http.get('https://api-mi-liga.now.sh/api/jugadores').subscribe((personas: Personas[])=>{
+      console.log(personas);
+      this.personas = personas;
+    });*/
 
+      this.servicioPersonas.obtenerPersonas().subscribe((personas: Personas[])=>{
+        console.log(personas);
+        this.personas = personas;
+      });
   }
 
 }

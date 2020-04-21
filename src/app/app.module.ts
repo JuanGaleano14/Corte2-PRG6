@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PersonasService } from './_services/personas.service';
 
 import { TablaComponent } from './components/tabla/tabla.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -104,9 +106,10 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatTreeModule,
     PortalModule,
     ScrollingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PersonasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
