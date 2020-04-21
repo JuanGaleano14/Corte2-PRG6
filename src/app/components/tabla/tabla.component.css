@@ -1,3 +1,8 @@
-table {
-    width: 100%;
+.persona-card {
+    margin: 10px;   
   }
+  
+.persona-header-image {
+    background-image: url('http://via.placeholder.com/50x50?text=thumb');
+    background-size: cover;
+}
