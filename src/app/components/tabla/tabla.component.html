@@ -1,4 +1,38 @@
-<mat-grid-list cols="4" rowHeight="400" style="padding: 10px;" *ngIf="personas.length > 0 else noData">
+<mat-grid-list cols="4" rowHeight="500" style="padding: 8px;" *ngIf="personas.length > 0 else noData">
+<br><br>
+  <mat-grid-tile>
+    <br><br><br><br>
+    <mat-card class="persona-card">
+
+      <mat-card-content align ="center">
+
+        <mat-form-field>
+          <input matInput placeholder="Nombre" [formControl] ="nombre">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Edad" [formControl] ="edad">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Apodo" [formControl] ="apodo">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Foto" [formControl] ="imagen">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Posición" [formControl] ="posicion">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Estado" [formControl] ="estado">
+        </mat-form-field>
+        <br>
+        <button mat-flat-button color="primary" (click) = guardar()>Guardar</button>
+
+      </mat-card-content>
+
+    </mat-card>
+
+  </mat-grid-tile>
+
   <mat-grid-tile *ngFor="let j of personas"> 
     <mat-card class="persona-card">
       <mat-card-header>
@@ -7,7 +41,14 @@
         <mat-card-subtitle>{{j.apodo}}</mat-card-subtitle>
       </mat-card-header>
       <img matCardImage src="http://via.placeholder.com/200x200?text=Foto+de+jugador">
-      <mat-card-actions aling="end"> <button mat-button color="primary">OK</button> </mat-card-actions>
+      <mat-card-content>
+        <b>Posición:</b> {{j.posicion}}<br>
+        <b>Edad:</b> {{j.edad}}<br>
+      </mat-card-content>
+      <mat-card-actions aling="end">
+         <button mat-button color="primary">Editar</button> 
+         <button mat-button color="primary">Eliminar</button>
+        </mat-card-actions>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
