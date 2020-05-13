@@ -15,10 +15,16 @@ export class PersonasService {
   }
 
   guardarPersonas(nombre: string, edad: string, apodo: string, imagen: string, posicion: string, estado: string){
-   
+
     return this.http.get('https://localhost/angulardb/guardar.php?nombre=' + nombre +
      '&edad=' + edad + '&apodo=' + apodo + '&foto=' + imagen + '&posicion=' + posicion + '&estado='
       + estado);
+
+  }
+
+  eliminarPersonas(id: string) {
+
+    return this.http.get('https://localhost/angulardb/eliminar.php?id=' + id);
 
   }
 

@@ -49,4 +49,13 @@ export class TablaComponent implements OnInit {
     this.ngOnInit();
   }
 
+  eliminar(id:string){
+
+    this.servicioPersonas.eliminarPersonas(id).subscribe((snap) => {
+      console.log(snap);
+    });
+    this.ngOnInit();
+
+  }
+
 }
