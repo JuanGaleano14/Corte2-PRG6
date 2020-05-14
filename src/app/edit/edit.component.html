@@ -1,0 +1,28 @@
+<mat-card class="persona-card">
+
+    <mat-card-content align ="center">
+
+      <mat-form-field>
+        <input matInput placeholder="Nombre" [formControl] ="nombre">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Edad" [formControl] ="edad">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Apodo" [formControl] ="apodo">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Foto" [formControl] ="imagen">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Posición" [formControl] ="posicion">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Estado" [formControl] ="estado">
+      </mat-form-field>
+      <br>
+      <button mat-flat-button color="primary" (click) = editar()>Guardar</button>
+
+    </mat-card-content>
+
+  </mat-card>

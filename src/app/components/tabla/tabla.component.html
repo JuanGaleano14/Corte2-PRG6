@@ -46,13 +46,18 @@
         <b>Edad:</b> {{j.edad}}<br>
       </mat-card-content>
       <mat-card-actions aling="end">
-         <button mat-button color="primary">Editar</button> 
+         <button mat-button color="primary" routerLink="/editar" (click)=editar(j.id)>Editar</button> 
          <button mat-button color="primary" (click)=eliminar(j.id)>Eliminar</button>
         </mat-card-actions>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
 
+<div>
+  <router-outlet></router-outlet>
+</div>
+
 <ng-template #noData>
   <div class="mat-elevation-z8 noData"><h2>No hay registros.</h2></div>
 </ng-template>
+
