@@ -42,7 +42,7 @@ export class EditComponent implements OnInit {
       this.posicion.value, this.estado.value).subscribe((snap) => {
       console.log(snap);
     });
-    this.ngOnInit();
+    location.href = 'http://localhost:4200/infoPersonas';
   }
 
 }
